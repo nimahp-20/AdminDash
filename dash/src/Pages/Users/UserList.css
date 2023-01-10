@@ -1,0 +1,9 @@
+.userList {
+  flex: 5;
+  margin: 10px;
+  height: 70vh
+}
+.userListUser {
+  display: flex;
+  align-items: center;
+}
