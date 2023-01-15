@@ -1,9 +1,35 @@
 .userList {
   flex: 5;
   margin: 10px;
-  height: 70vh
+  height: 55.2vh
 }
 .userListUser {
   display: flex;
   align-items: center;
+}
+
+.userListAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userListUsername {
+  margin-left: 10px;
+}
+
+.userListStatus {
+  padding: 5px 7px;
+  border: none;
+  border-radius: 10px;
+}
+
+.Active {
+  color: #3bb377;
+  background-color: #e5faf2;
+}
+
+.DeActive {
+  color: #d95087;
+  background-color: #fff0f1;
 }
