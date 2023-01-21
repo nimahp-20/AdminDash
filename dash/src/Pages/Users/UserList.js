@@ -4,11 +4,20 @@ import { usersRows } from "../../datas";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import "./UserList.css";
+
 
 
 export default function UserList() {
   const [usersData, setUsersData] = useState(usersRows);
+
+  const userDelete = (userID) => {
+    setUsersData(usersData.filter(user => {
+      return user.id !== userID
+    }))
+  }
+
   const Button = ({ type }) => {
     return <button className={"userListStatus " + type}>{type}</button>;
   };
@@ -17,7 +26,7 @@ export default function UserList() {
     {
       field: "username",
       headerName: "User",
-      width: 200,
+      width: 180,
       renderCell: (params) => {
         return (
           <Link to="/" className="link userListUser">
@@ -37,6 +46,7 @@ export default function UserList() {
         );
       },
     },
+
     { field: "realname", headerName: "RealName", width: 200 },
     { field: "title", headerName: "Title", width: 200 },
     { field: "email", headerName: "Email", width: 300 },
@@ -48,6 +58,24 @@ export default function UserList() {
         return <Button type={params.row.status} />;
       },
     },
+    {
+      field: 'action',
+      headerName: 'Action',
+      width: 120,
+      renderCell: (params) => {
+        return (
+          <>
+            <Link to={`/user/${params.row.id}`} className='link'>
+              <button className='userListEdit'>Edit</button>
+            </Link>
+            <DeleteOutlineIcon
+              className="userListDelete"
+              onClick={() => userDelete(params.row.id)}
+            />
+          </>
+        )
+      }
+    }
   ];
 
   return (

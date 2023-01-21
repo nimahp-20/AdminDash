@@ -134,4 +134,36 @@ const transActions = [
     status: "Declined",
   },
 ];
-export { xAsxisData, newMembers, transActions, usersRows };
+
+let products = [
+  {
+    id: 1,
+    title: 'Mobile',
+    avatar: '',
+    price: 1200,
+    status: 'inOrder'
+  },
+  {
+    id: 2,
+    title: 'Car',
+    avatar: '',
+    price: 2000,
+    status: 'inOrder'
+  },
+  {
+    id: 3,
+    title: 'Home',
+    avatar: '',
+    price: 40000,
+    status: 'inOrder'
+  },
+  {
+    id: 4,
+    title: 'Scanner',
+    avatar: '',
+    price: 130,
+    status: 'notFound'
+  },
+
+]
+export { xAsxisData, newMembers, transActions, usersRows, products };
