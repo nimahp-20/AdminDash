@@ -70,7 +70,7 @@ export default function ProductList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={`/products/${params.row.id}`} className="link">
+            <Link to={`/product/${params.row.id}`} className="link">
               <button className="productsListEdit">Edit</button>
             </Link>
             <DeleteOutlineIcon
@@ -89,7 +89,8 @@ export default function ProductList() {
         rows={productData}
         columns={columns}
         disableSelectionOnClick
-        pageSize={10}
+        pageSize={9}
+        checkboxSelection
       />
     </div>
   );

@@ -166,4 +166,19 @@ let products = [
   },
 
 ]
-export { xAsxisData, newMembers, transActions, usersRows, products };
+
+const productsData = [
+  { name: "Jan", sale: 112_000 },
+  { name: "Feb", sale: 99_000 },
+  { name: "Mar", sale: 12_000 },
+  { name: "Apr", sale: 97_000 },
+  { name: "May", sale: 11_000 },
+  { name: "Jun", sale: 86_000 },
+  { name: "Jul", sale: 102_000 },
+  { name: "Agu", sale: 119_000 },
+  { name: "Sep", sale: 152_000 },
+  { name: "Oct", sale: 82_000 },
+  { name: "Nov", sale: 62_000 },
+  { name: "Dec", sale: 97_000 },
+]
+export { xAsxisData, newMembers, transActions, usersRows, products, productsData };
